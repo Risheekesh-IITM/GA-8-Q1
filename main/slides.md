@@ -1,197 +1,375 @@
 ---
-
 marp: true
-theme: custom
+theme: default
 paginate: true
-class: lead
------------
-
-<!--- Custom theme CSS for Marp -->
-
-<!---
-You can keep this file under version control (e.g., `slides.md`) and use the raw GitHub URL to render it with Marp CLI or online viewers.
---->
+header: 'Product Documentation'
+footer: '24f1001771@ds.study.iitm.ac.in'
+---
 
 <style>
-/* Custom theme: define colors, fonts, and page-number styling */
+/* Custom Theme Specification */
 section {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-}
-:root {
-  --brand-bg: #0b1220;
-  --brand-accent: #06b6d4;
-  --muted: #94a3b8;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 60px;
 }
 
-/* Headings */
-section h1, section h2, section h3 {
-  color: white;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+header {
+  color: #666;
+  font-size: 14px;
+  text-align: left;
 }
 
-/* Body text */
-section p, section li {
-  color: #e6eef6;
+footer {
+  color: #666;
+  font-size: 12px;
+  text-align: right;
 }
 
-/* Accent rule */
-hr {
-  border: 0;
-  height: 3px;
-  background: linear-gradient(90deg,var(--brand-accent),transparent);
-  margin: 1rem 0 2rem 0;
+h1 {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
 }
 
-/* Page number positioning (works together with `paginate: true`) */
-.marpit-footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--muted);
-  font-size: 0.85rem;
-  padding-right: 1.25rem;
+h2 {
+  color: #3498db;
 }
 
-/* Code block styling */
-pre code {
-  background: rgba(0,0,0,0.45);
-  padding: 0.75rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
+code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #e74c3c;
 }
 
-/* Small callout block */
-.callout {
-  background: rgba(255,255,255,0.03);
-  border-left: 4px solid var(--brand-accent);
-  padding: 0.6rem 0.8rem;
-  border-radius: 4px;
-  color: #dff6fb;
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+blockquote {
+  border-left: 4px solid #3498db;
+  padding-left: 20px;
+  color: #555;
+  font-style: italic;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 </style>
 
 ---
 
-<!-- Title slide -->
+<!-- _class: lead -->
+<!-- _paginate: false -->
 
-# Product Documentation
+# Product API Documentation
+## Technical Overview & Implementation Guide
 
-> Maintainable Marp slides for product docs
-
-* **Author:** Technical Writing Team
-* **Contact:** [24f1001771@ds.study.iitm.ac.in](mailto:24f1001771@ds.study.iitm.ac.in)
-
----
-
-<!-- Agenda -->
-
-## Agenda
-
-1. Overview
-2. Installation & Usage
-3. Architecture & API
-4. Algorithm / Complexity
-5. Release Notes & Maintenance
-6. Contact
+**Prepared by:** Technical Writing Team
+**Contact:** 24f1001771@ds.study.iitm.ac.in
+**Version:** 2.0.0
 
 ---
 
-<!-- Overview slide with small callout -->
+<!-- backgroundColor: #f8f9fa -->
 
-## Overview
+## Table of Contents
 
-This documentation covers the core product features, quickstart instructions, API surface, and algorithmic details required by engineers and integrators.
-
-> **Why Marp?**
->
-> * Keeps slides as plain Markdown (great for version control).
-> * Easy to convert to PDF, HTML, PPTX using Marp CLI or CI.
+1. Introduction & Architecture
+2. API Endpoints Overview
+3. Performance Characteristics
+4. Authentication & Security
+5. Code Examples
+6. Best Practices
 
 ---
 
-## Installation & Quickstart
+<!-- color: white -->
 
-```bash
-# clone repo
-git clone https://github.com/your-username/product-docs.git
-cd product-docs
-# render slides to PDF using Marp CLI
-npx @marp-team/marp-cli slides.md --pdf --theme-set ./ --allow-local-files
+![bg](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80)
+
+# Introduction
+
+Building scalable and maintainable software systems
+
+Contact: 24f1001771@ds.study.iitm.ac.in
+
+---
+
+<!-- header: "" -->
+<!-- footer: "24f1001771@ds.study.iitm.ac.in | Architecture Overview" -->
+
+## System Architecture
+
+Our platform follows a microservices architecture with the following components:
+
+- **API Gateway**: Routes requests and handles authentication
+- **Service Layer**: Business logic and data processing
+- **Data Layer**: Persistent storage and caching
+- **Message Queue**: Asynchronous task processing
+
+> All services communicate via RESTful APIs and message queues
+
+---
+
+<!-- class: invert -->
+
+## API Endpoints Overview
+
+<div class="columns">
+
+### User Management
+- `POST /api/users`
+- `GET /api/users/{id}`
+- `PUT /api/users/{id}`
+- `DELETE /api/users/{id}`
+
+### Data Operations
+- `POST /api/data`
+- `GET /api/data/{id}`
+- `PUT /api/data/{id}`
+- `DELETE /api/data/{id}`
+
+</div>
+
+---
+
+<!-- _backgroundColor: #ecf0f1 -->
+<!-- _color: #2c3e50 -->
+
+## Performance Characteristics
+
+### Time Complexity Analysis
+
+The core search algorithm operates with logarithmic complexity:
+
+$$
+T(n) = O(\log n)
+$$
+
+For batch operations with $m$ items:
+
+$$
+T(n, m) = O(m \cdot \log n)
+$$
+
+### Space Complexity
+
+Memory usage scales linearly with dataset size:
+
+$$
+S(n) = O(n) + O(k)
+$$
+
+where $k$ is the cache size (typically $k \ll n$)
+
+---
+
+<!-- _paginate: skip -->
+
+## Authentication Flow
+
+```python
+import jwt
+from datetime import datetime, timedelta
+
+def generate_token(user_id: str, secret_key: str) -> str:
+    """
+    Generate JWT token for authenticated users
+    """
+    payload = {
+        'user_id': user_id,
+        'exp': datetime.utcnow() + timedelta(hours=24),
+        'iat': datetime.utcnow()
+    }
+    
+    token = jwt.encode(payload, secret_key, algorithm='HS256')
+    return token
 ```
 
 ---
 
-<!-- Background image slide -->
+<!-- _color: #2c3e50 -->
+
+![bg opacity:.3](https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=1920&q=80)
+
+# Security Best Practices
+
+- Always use HTTPS in production
+- Implement rate limiting
+- Validate all input data
+- Use parameterized queries
+- Keep dependencies updated
+
+**Contact:** 24f1001771@ds.study.iitm.ac.in
 
 ---
 
-backgroundImage: url('[https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80](https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80)')
-backgroundSize: cover
-backgroundPosition: center
+<!-- _header: "API Examples" -->
 
-# Architecture Overview
+## Request Example
 
-> High-level diagram and flow (see repository `assets/architecture.png` for the editable source)
+### Creating a New Resource
+
+```bash
+curl -X POST https://api.example.com/v1/resources \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Example Resource",
+    "type": "document",
+    "metadata": {
+      "priority": "high"
+    }
+  }'
+```
+
+**Response:** `201 Created`
 
 ---
 
-## API Surface
+<!-- _backgroundColor: white -->
 
-* `POST /v1/auth` — returns JWT
-* `GET /v1/resources` — list resources
-* `POST /v1/resources` — create resource
+## Error Handling
+
+All API errors follow a consistent format:
 
 ```json
 {
-  "id": "resource_123",
-  "name": "Example"
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "The request payload is invalid",
+    "details": [
+      {
+        "field": "email",
+        "issue": "Invalid email format"
+      }
+    ]
+  }
 }
 ```
 
 ---
 
-## Algorithmic Complexity
+<!-- _footer: "" -->
 
-We use a divide-and-conquer algorithm for batch reconciliation. The recurrence relation for the time complexity is:
+## Rate Limiting
 
-$$
-T(n) = 2,T\left(\frac{n}{2}\right) + n,\log n
-$$
+Our API implements token bucket rate limiting:
 
-By the Master Theorem (case 2 with extra poly-log factor), the asymptotic bound is:
+- **Standard Tier**: 100 requests per minute
+- **Premium Tier**: 1000 requests per minute
+- **Enterprise Tier**: Custom limits
 
-$$
-T(n) = \Theta(n,\log n,\log n) = \Theta(n,(\log n)^2).
-$$
+The remaining quota is returned in response headers:
 
-**Space complexity:** $$S(n) = O(n)$$
-
----
-
-## Release Notes & Maintenance
-
-* Keep slide file `slides.md` under `main` branch (or `docs` branch if you prefer).
-* Store assets (images, diagrams) in `assets/` and reference them with relative links when possible.
+```
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 87
+X-RateLimit-Reset: 1638360000
+```
 
 ---
 
-## Contributing
+<!-- _class: lead -->
 
-1. Edit `slides.md` in a feature branch.
-2. Commit and open a PR targeting `main`.
-3. CI should run `npx @marp-team/marp-cli slides.md --html` to validate rendering.
+## Webhook Configuration
+
+Subscribe to real-time events:
+
+```javascript
+const webhook = {
+  url: "https://your-server.com/webhook",
+  events: [
+    "resource.created",
+    "resource.updated",
+    "resource.deleted"
+  ],
+  secret: "your_webhook_secret"
+};
+
+// Verify webhook signatures
+const signature = crypto
+  .createHmac('sha256', webhook.secret)
+  .update(payload)
+  .digest('hex');
+```
 
 ---
 
-## Contact & License
+## Algorithm Complexity Summary
 
-If you have questions, email: **[24f1001771@ds.study.iitm.ac.in](mailto:24f1001771@ds.study.iitm.ac.in)**
+| Operation | Time Complexity | Space Complexity |
+|-----------|----------------|------------------|
+| Search | $O(\log n)$ | $O(1)$ |
+| Insert | $O(\log n)$ | $O(1)$ |
+| Delete | $O(\log n)$ | $O(1)$ |
+| Batch Update | $O(m \log n)$ | $O(m)$ |
 
-* License: MIT
+**Note:** Complexities assume balanced tree structures
 
 ---
 
-<!-- End slide with small footer note -->
+<!-- _backgroundColor: #3498db -->
+<!-- _color: white -->
 
-footer: "Product Documentation — Technical Writing"
+## Best Practices
+
+### DO ✓
+- Cache frequently accessed data
+- Use pagination for large datasets
+- Implement exponential backoff for retries
+- Monitor API usage metrics
+
+### DON'T ✗
+- Store sensitive data in logs
+- Make synchronous calls in loops
+- Ignore rate limit headers
+- Use deprecated endpoints
+
+---
+
+![bg right:40%](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&q=80)
+
+## Version Control Integration
+
+This documentation is maintained in Git:
+
+```bash
+# Clone the repository
+git clone https://github.com/yourorg/api-docs.git
+
+# Build slides
+npm install -g @marp-team/marp-cli
+marp slides.md -o output.pdf
+
+# Generate HTML
+marp slides.md -o output.htmls
+```
+
+**Contact:** 24f1001771@ds.study.iitm.ac.in
+
+---
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
+<!-- _header: "" -->
+<!-- _footer: "" -->
+
+![bg](https://images.unsplash.com/photo-1557853197-aefb550b6fdc?w=1920&q=80)
+
+# Thank You
+
+## Questions?
+
+**Email:** 24f1001771@ds.study.iitm.ac.in
+**Documentation:** https://docs.example.com
+**Support:** https://support.example.com
