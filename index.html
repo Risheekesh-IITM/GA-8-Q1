@@ -1,145 +1,111 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quarterly Earnings - Interactive Reveal.js Presentation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Reveal.js CSS (CDN) -->
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/reveal.css">
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/theme/black.css" id="theme">
-  <!-- Highlight.js for code syntax highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+<title>Quarterly Earnings Report — Financial Institution</title>
 
-  <style>
-    /* small visual polish for financial numbers */
-    .kpi { font-size: 2rem; font-weight: 700; }
-    .muted { opacity: .75; }
-  </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css" id="theme">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+<style>
+    .email-tag { font-size: 22px; font-weight: bold; color:#00e1ff; margin-top:10px; }
+    .kpi { font-size: 2.6rem; font-weight:700; }
+</style>
 </head>
+
 <body>
-  <div class="reveal">
-    <div class="slides">
+<div class="reveal">
+<div class="slides">
 
-      <!-- Title slide -->
-      <section>
-        <h1>24f1001771@ds.study.iitm.ac.in</h1>
-        <p>24f1001771@ds.study.iitm.ac.in</p>
-        <h2>24f1001771@ds.study.iitm.ac.in</h2>
-        <a href="mailto:24f1001771@ds.study.iitm.ac.in">24f1001771@ds.study.iitm.ac.in</a>
+<!-- Title Slide -->
+<section>
+    <h1>Quarterly Earnings Report</h1>
+    <h3>Prepared for Stakeholders & Board Review</h3>
+    <p class="email-tag">📩 24f1001771@ds.study.iitm.ac.in</p>
+    <aside class="notes">Introduce quarter context, market behavior & profit trends.</aside>
+</section>
 
-        <h1>Quarterly Earnings Report</h1>
-        <h3>Interactive presentation — Modernized for stakeholders</h3>
-        <p class="muted">Prepared by: Technical Consulting Team</p>
-        <p>Contact: <a href="mailto:24f1001771@ds.study.iitm.ac.in">24f1001771@ds.study.iitm.ac.in</a></p>
-        <aside class="notes">Open with brief context on quarter and primary goals for the meeting. Call out that this deck is interactive and contains live-like snippets, math, and code examples for transparency.</aside>
-      </section>
+<!-- Markdown Slide -->
+<section data-markdown>
+<textarea data-template>
+## Q1 Performance Overview 📊  
+- Revenue growth: **6.2% YoY**
+- Net profit margin improved  
+- Strong performance in retail lending  
 
-      <!-- Markdown slide (demonstrates markdown parsing) -->
-      <section data-markdown>
-        <script type="text/template">
+> The next slides break down financial drivers.
+</textarea>
+<aside class="notes">Explain YoY performance and industry environment.</aside>
+</section>
 
-## Highlights (Markdown slide)
+<!-- KPI (Fragments Animated) -->
+<section>
+    <h2>Key Financial Indicators</h2>
+    <ul>
+        <li class="fragment">Revenue: <span class="kpi">₹12.4B</span></li>
+        <li class="fragment">Net Income: <span class="kpi">₹1.8B</span></li>
+        <li class="fragment">EPS: <span class="kpi">₹3.12</span></li>
+    </ul>
+    <p class="fragment email-tag">Contact: 24f1001771@ds.study.iitm.ac.in</p>
+    <aside class="notes">Expand on cost optimization and growth vectors.</aside>
+</section>
 
-- **Revenue** increased by **6.2%** YoY.
-- **Operating margin** improved due to cost controls.
-- Key drivers:
-  1. Fee income growth
-  2. Reduced FX losses
+<!-- Python Code Highlighting -->
+<section>
+<h2>Profitability Analysis (Python)</h2>
+<pre><code class="language-python">
+revenue = 12.4e9
+expenses = 9.8e9
+profit = revenue - expenses
+margin = (profit / revenue) * 100
+print(f"Profit Margin: {margin:.2f}%")
+</code></pre>
+<aside class="notes">Demonstrate transparency with reproducible calculations.</aside>
+</section>
 
-> For details, see the following KPI slide.
+<!-- Mathematical Finance Formula -->
+<section>
+<h2>Weighted Average Cost of Capital (WACC)</h2>
+<p>\\[ WACC = \frac{E}{V} r_E \;+\; \frac{D}{V} r_D (1 - T_c) \\]</p>
+<ul>
+<li class="fragment">\(E\) — Equity market value</li>
+<li class="fragment">\(D\) — Debt market value</li>
+<li class="fragment">\(T_c\) — Corporate tax rate</li>
+</ul>
+<p class="fragment email-tag">Email: 24f1001771@ds.study.iitm.ac.in</p>
+<aside class="notes">Discuss implications on capital cost and investment decisions.</aside>
+</section>
 
-        </script>
-        <aside class="notes">Read out the bullets; mention which departments contributed most to fee income growth.</aside>
-      </section>
+<!-- Publishing Instructions -->
+<section>
+    <h2>GitHub Pages Deployment</h2>
+    <p>Hosted Presentation:</p>
+    <h3>🔗 <code>https://risheekesh-iitm.github.io/GA-8-Q1/</code></h3>
+    <p>Force latest version:</p>
+    <h4><code>?v=1</code> → <code>?v=2</code> → <code>?v=3</code></h4>
+    <p class="email-tag">📩 24f1001771@ds.study.iitm.ac.in</p>
+    <aside class="notes">Remind viewers they can refresh for updates.</aside>
+</section>
 
-      <!-- KPI slide with fragments (animated appear) -->
-      <section>
-        <h2>Key KPIs</h2>
-        <ul>
-          <li class="fragment">Revenue: <span class="kpi">₹12.4B</span></li>
-          <li class="fragment">Net Income: <span class="kpi">₹1.8B</span></li>
-          <li class="fragment">EPS: <span class="kpi">₹3.12</span></li>
-        </ul>
-        <aside class="notes">Use fragments to reveal KPIs one-by-one. Pause after revenue to discuss seasonality.</aside>
-      </section>
+</div>
+</div>
 
-      <!-- Code sample with syntax highlighting -->
-      <section>
-        <h2>Reproducible Calculation (Python)</h2>
-        <pre><code class="language-python"># Simple ROI calculation for a project
-initial_investment = 2500000  # ₹2.5M
-net_return = 4200000          # ₹4.2M
-roi = (net_return - initial_investment) / initial_investment
-print(f"ROI = {roi:.2%}")</code></pre>
-        <aside class="notes">Explain how ROI is computed and where numbers come from. Mention assumptions and encourage stakeholders to review model inputs.</aside>
-      </section>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/math/math.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/notes/notes.js"></script>
 
-      <!-- Slide with math (MathJax) -->
-      <section>
-        <h2>Financial Formula</h2>
-        <p>Weighted Average Cost of Capital (WACC):</p>
-        <p class="fragment">\[ \mathrm{WACC} = \frac{E}{V}r_E + \frac{D}{V}r_D(1 - T_C) \]</p>
-        <p class="fragment">Where:</p>
-        <ul>
-          <li class="fragment">\(E\) = Market value of equity</li>
-          <li class="fragment">\(D\) = Market value of debt</li>
-          <li class="fragment">\(V = E + D\)</li>
-          <li class="fragment">\(r_E, r_D\) = cost of equity and debt</li>
-          <li class="fragment">\(T_C\) = corporate tax rate</li>
-        </ul>
-        <aside class="notes">Walk through the components. Optional: show a small sensitivity table (not included) if asked.</aside>
-      </section>
-
-      <!-- Slide using fragments for a step-by-step walkthrough -->
-      <section>
-        <h2>Quarter-over-Quarter Revenue Bridge</h2>
-        <p>Contributors to revenue change:</p>
-        <ol>
-          <li class="fragment">Price effect</li>
-          <li class="fragment">Volume effect</li>
-          <li class="fragment">Forex impact</li>
-          <li class="fragment">Product mix</li>
-        </ol>
-        <aside class="notes">Click through each fragment and give 1-2 sentence color on the magnitude and risk for each contributor.</aside>
-      </section>
-
-      <!-- Closing slide with publish instructions and link placeholder -->
-      <section>
-        <h2>Published Presentation</h2>
-        <p>This RevealJS presentation is meant to be hosted on GitHub Pages.</p>
-        <p>Replace <code>[GITHUB_USER]</code> and <code>[REPO]</code> with your GitHub username and repository name.</p>
-        <p class="fragment">Example GitHub Pages URL (project site):</p>
-        <p class="fragment"><code>https://[GITHUB_USER].github.io/[REPO]/</code></p>
-        <p class="fragment">Cache-busting example: <code>https://[GITHUB_USER].github.io/[REPO]/?v=1</code></p>
-        <aside class="notes">Tell stakeholders where to find the live deck. If you create a repo named <code>quarterly-earnings-presentation</code> under your account, the URL becomes <code>https://&lt;your-username&gt;.github.io/quarterly-earnings-presentation/</code>.</aside>
-      </section>
-
-    </div>
-  </div>
-
-  <!-- Reveal.js and plugins (CDN) -->
-  <script src="https://unpkg.com/reveal.js@4/dist/reveal.js"></script>
-  <script src="https://unpkg.com/reveal.js@4/plugin/markdown/markdown.js"></script>
-  <script src="https://unpkg.com/reveal.js@4/plugin/highlight/highlight.js"></script>
-  <script src="https://unpkg.com/reveal.js@4/plugin/notes/notes.js"></script>
-  <script src="https://unpkg.com/reveal.js@4/plugin/math/math.js"></script>
-
-  <!-- Highlight.js (CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-
-  <script>
-    // Initialize Reveal
-    Reveal.initialize({
-      hash: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ],
-      center: true,
-      slideNumber: true,
-      math: {
-        // uses KaTeX by default in Reveal; when using plugin/math, MathJax is also supported
-        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
-      }
-    });
-  </script>
+<script>
+Reveal.initialize({
+    plugins:[RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+    slideNumber:true,
+    hash:true,
+    math:{mathjax:'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'}
+});
+</script>
 </body>
 </html>
