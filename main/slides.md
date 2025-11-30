@@ -124,6 +124,8 @@ npx @marp-team/marp-cli slides.md --pdf --theme-set ./ --allow-local-files
 
 <!-- Background image slide -->
 
+---
+
 backgroundImage: url('[https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80](https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80)')
 backgroundSize: cover
 backgroundPosition: center
